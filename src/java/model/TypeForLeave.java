@@ -8,17 +8,17 @@ package model;
  *
  * @author hp
  */
-public class Role {
+public class TypeForLeave {
     private int id;
     private String name;
-    private float basic_salary;
-    private float glone;
+    private String symbols;
+    private float salary;
 
-    public Role(int id, String name, float basic_salary, float glone) {
+    public TypeForLeave(int id, String name, String symbols, float salary) {
         this.id = id;
         this.name = name;
-        this.basic_salary = basic_salary;
-        this.glone = glone;
+        this.symbols = symbols;
+        this.salary = salary;
     }
 
     public int getId() {
@@ -37,20 +37,20 @@ public class Role {
         this.name = name;
     }
 
-    public float getBasic_salary() {
-        return basic_salary;
+    public String getSymbols() {
+        return symbols;
     }
 
-    public void setBasic_salary(float basic_salary) {
-        this.basic_salary = basic_salary;
+    public void setSymbols(String symbols) {
+        this.symbols = symbols;
     }
 
-    public float getGlone() {
-        return glone;
+    public float getSalary() {
+        return salary;
     }
 
-    public void setGlone(float glone) {
-        this.glone = glone;
+    public void setSalary(float salary) {
+        this.salary = salary;
     }
     
     
