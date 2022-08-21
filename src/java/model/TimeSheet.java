@@ -4,10 +4,16 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author hp
  */
 public class TimeSheet {
+    private int id;
+    private Date checkin;
+    private Date checkout;
+    private WorkDate workdate;
     
 }

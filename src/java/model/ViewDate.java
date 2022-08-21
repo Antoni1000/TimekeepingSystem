@@ -4,10 +4,26 @@
  */
 package model;
 
+import helper.DateTimeHelper;
+import java.util.Date;
+
 /**
  *
  * @author hp
  */
 public class ViewDate {
+    private Date value;
+    private int dow;
     
+    public Date getValue() {
+        return value;
+    }
+
+    public void setValue(Date value) {
+        this.value = value;
+    }
+
+    public int getDow() {
+        return DateTimeHelper.getDayOfWeek(value);
+    }
 }
