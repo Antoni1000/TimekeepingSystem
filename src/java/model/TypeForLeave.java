@@ -4,6 +4,10 @@
  */
 package model;
 
+import helper.DateTimeHelper;
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author hp
@@ -13,6 +17,23 @@ public class TypeForLeave {
     private String name;
     private String symbols;
     private float salary;
+    private Date from;
+    private Date to;
+    private ArrayList<Employee> emps = new ArrayList<>();
+    
+    public float getDays()
+    {
+        return DateTimeHelper.diffHours(to,from)/24;
+    }
+
+
+    public ArrayList<Employee> getEmps() {
+        return emps;
+    }
+
+    public void setEmps(ArrayList<Employee> emps) {
+        this.emps = emps;
+    }
 
     public TypeForLeave(int id, String name, String symbols, float salary) {
         this.id = id;

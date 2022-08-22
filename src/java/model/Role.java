@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author hp
@@ -13,13 +15,35 @@ public class Role {
     private String name;
     private float basic_salary;
     private float glone;
+    private float pay_rate;
 
-    public Role(int id, String name, float basic_salary, float glone) {
+    public float getPay_rate() {
+        return pay_rate;
+    }
+
+    public void setPay_rate(float pay_rate) {
+        this.pay_rate = pay_rate;
+    }
+
+    public ArrayList<Employee> getEmps() {
+        return emps;
+    }
+
+    public void setEmps(ArrayList<Employee> emps) {
+        this.emps = emps;
+    }
+
+    public Role(int id, String name, float basic_salary, float glone, float pay_rate) {
         this.id = id;
         this.name = name;
         this.basic_salary = basic_salary;
         this.glone = glone;
+        this.pay_rate = pay_rate;
     }
+    private ArrayList<Employee> emps = new ArrayList<>();
+    
+
+    
 
     public int getId() {
         return id;

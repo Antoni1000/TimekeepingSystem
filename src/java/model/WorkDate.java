@@ -4,6 +4,8 @@
  */
 package model;
 
+import helper.DateTimeHelper;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -14,7 +16,7 @@ public class WorkDate {
     private int id;
     private Date from;
     private Date to;
-    private TimeSheet timesheet;
+    private ArrayList<TimeSheet> timesheets = new ArrayList<>();
 
     public int getId() {
         return id;
@@ -40,13 +42,24 @@ public class WorkDate {
         this.to = to;
     }
 
-    public TimeSheet getTimesheet() {
-        return timesheet;
+    public ArrayList<TimeSheet> getTimesheets() {
+        return timesheets;
     }
 
-    public void setTimesheet(TimeSheet timesheet) {
-        this.timesheet = timesheet;
+    public void setTimesheets(ArrayList<TimeSheet> timesheets) {
+        this.timesheets = timesheets;
     }
+
+    public WorkDate(int id, Date from, Date to) {
+        this.id = id;
+        this.from = from;
+        this.to = to;
+    }
+
+    public Date getCidate() {
+        return DateTimeHelper.removeTime(from);
+    }
+    
     
     
 } 
